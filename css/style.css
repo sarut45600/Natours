@@ -4,13 +4,14 @@
 900 - 1200px: Tablet landscape
 [1200 - 1800] is where our normal styles apply
 1800px + :    Big desktop
-*/
-/*
+
 $breakpoint arguement choices:
 - phone
 - tab-port
 - tab-land
 - big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components 
 
 1em = 16px
  */
@@ -79,6 +80,12 @@ html {
 
 body {
   box-sizing: border-box;
+  padding: 3rem;
+}
+@media (max-width: 56.25em) {
+  body {
+    padding: 0;
+  }
 }
 
 body {
@@ -87,7 +94,6 @@ body {
   /* font-size: 16px; */
   line-height: 1.7;
   color: #777;
-  padding: 3rem;
 }
 
 .heading-primary {
