@@ -4,11 +4,17 @@
   "description": "Landing page for natours",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "sass --no-source-map sass/main.scss css/style.css -w"
+    "watch:sass": "sass --no-source-map sass/main.scss css/style.css -w",
+    "compile:sass": "sass --no-source-map sass/main.scss css/style.comp.css",
+    "concat:css": "concat -o css/style.concat.css css/icon-font.css css/style.comp.css",
+    "prefix:css": ""
   },
   "author": "Sarut",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "concat": "^1.0.3",
+    "postcss-cli": "^11.0.0",
     "sass": "^1.77.8"
   }
 }
